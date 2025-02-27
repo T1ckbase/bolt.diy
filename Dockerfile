@@ -15,7 +15,7 @@ RUN npm install -g pnpm && pnpm install
 COPY . .
 
 # Expose the port the app runs on
-EXPOSE 5173
+EXPOSE 7860
 
 # Production image
 FROM base AS bolt-ai-production
@@ -64,7 +64,7 @@ FROM base AS bolt-ai-development
 
 # Define the same environment variables for development
 ARG GROQ_API_KEY
-ARG HuggingFace 
+ARG HuggingFace
 ARG OPENAI_API_KEY
 ARG ANTHROPIC_API_KEY
 ARG OPEN_ROUTER_API_KEY
