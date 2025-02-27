@@ -1,3 +1,14 @@
+---
+title: Bolt.diy
+emoji: 🔩
+colorFrom: blue
+colorTo: gray
+sdk: docker
+pinned: false
+license: mit
+short_description: bolt.diy
+---
+
 # bolt.diy (Previously oTToDev)
 
 [![bolt.diy: AI-Powered Full-Stack Web Development in the Browser](./public/social_preview_index.jpg)](https://bolt.diy)
