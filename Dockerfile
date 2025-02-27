@@ -1,6 +1,12 @@
 ARG BASE=node:20.18.0
 FROM ${BASE} AS base
 
+ENV PNPM_HOME="/pnpm"
+
+ENV PATH="$PNPM_HOME:$PATH"
+
+RUN corepack enable
+
 WORKDIR /app
 
 # Install dependencies (this step is cached as long as the dependencies don't change)
@@ -9,7 +15,7 @@ COPY package.json pnpm-lock.yaml ./
 #RUN npm install -g corepack@latest
 
 #RUN corepack enable pnpm && pnpm install
-RUN npm install -g pnpm && pnpm install
+RUN pnpm install
 
 # Copy the rest of your app's source code
 COPY . .
